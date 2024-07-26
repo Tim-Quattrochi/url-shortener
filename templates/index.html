@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Create Short Code</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Create a New Short Code</h1>
+    <div id="error-message" style="color: red; display: none"></div>
+    <div
+      id="success-message"
+      style="color: green; display: none"
+    ></div>
+    <form id="create-form">
+      <label for="api_key">API Key:</label>
+      <input
+        type="text"
+        id="api_key"
+        name="api_key"
+        required
+      /><br /><br />
+      <label for="code">Short Code:</label>
+      <input type="text" id="code" name="code" required /><br /><br />
+      <label for="url">URL:</label>
+      <input type="url" id="url" name="url" required /><br /><br />
+      <button type="submit">Create Short Code</button>
+    </form>
+    <script src="../static/index.js"></script>
+  </body>
+</html>
